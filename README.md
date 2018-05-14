@@ -3,4 +3,4 @@ Programação em dispositivos móveis
 
 Integrantes:
 Bruno Paula Mendes 
-\\ Michael Douglas Soares
+<br/>Michael Douglas Soares
