@@ -2,5 +2,5 @@
 Programação em dispositivos móveis
 
 Integrantes:
-Bruno Paula Mendes
+Bruno Paula Mendes \n
 Michael Douglas Soares
