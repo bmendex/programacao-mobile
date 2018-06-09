@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#8bc34a</color>
+    <color name="colorPrimary">#0d0d0d</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorSecundaryDark">#f9c93b</color>
+    <color name="colorLogin">#0a0909</color>
+    <color name="colorRegister">#9eda58</color>
+    <color name="colorCancel">#ffeeb3</color>
+    <color name="colorButton">#8bc34a</color>
+    <color name="colorButtonSave">#8bc34a</color>
+    <color name="colorButtonCancel">#c12219</color>
+    <color name="colorTextWhite">#ffff</color>
+</resources>
