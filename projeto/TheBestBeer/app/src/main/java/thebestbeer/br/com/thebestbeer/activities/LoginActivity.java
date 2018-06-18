@@ -91,13 +91,13 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
         );
-        mBinding.entrarSemLgnFb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                HomeActivity_.intent(LoginActivity.this).start();
-                Log.d("LoginActivity.onClick" + HomeActivity_.intent(LoginActivity.this));
-            }
-        });
+//        mBinding.entrarSemLgnFb.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                HomeActivity_.intent(LoginActivity.this).start();
+//                Log.d("LoginActivity.onClick" + HomeActivity_.intent(LoginActivity.this));
+//            }
+//        });
 
         // Exibe a tela de login por 3 segundos e apresenta a tela inicial
         Handler handler = new Handler();

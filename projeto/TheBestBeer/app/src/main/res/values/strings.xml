@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TheBestBeer</string>
-    <string name="facebook_app_id">2029681650617085</string>
-    <string name="fb_login_protocol_scheme">fb486992991716063</string>
+    <string name="facebook_app_id">1882389945394669</string>
+    <string name="fb_login_protocol_scheme">fb1882389945394669</string>
     <string name="label_login">Login</string>
     <string name="label_senha">Senha:</string>
     <string name="button_entrar">Entrar</string>
