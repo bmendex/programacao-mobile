@@ -59,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Acessando views no xml
         mBinding.loginButton.setVisibility(View.VISIBLE);
+        mBinding.entrarSemLgnFb.setVisibility(View.VISIBLE);
 
         final CallbackManager callbackManager = CallbackManager.Factory.create();
     //      Callback registration
@@ -78,15 +79,25 @@ public class LoginActivity extends AppCompatActivity {
                     public void onCancel() {
                         // Se cancelar voltar para tela de login
                         Toast.makeText(LoginActivity.this, "Não deu boa", Toast.LENGTH_SHORT).show();
+
+                        Log.d("LoginActivity.onCancel");
                     }
 
                     @Override
                     public void onError(FacebookException exception) {
                         // Se erro setar mensagem
                         Toast.makeText(LoginActivity.this, "ERRO", Toast.LENGTH_SHORT).show();
+                        Log.d("LoginActivity.onError");
                     }
                 }
         );
+        mBinding.entrarSemLgnFb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                HomeActivity_.intent(LoginActivity.this).start();
+                Log.d("LoginActivity.onClick" + HomeActivity_.intent(LoginActivity.this));
+            }
+        });
 
         // Exibe a tela de login por 3 segundos e apresenta a tela inicial
         Handler handler = new Handler();
@@ -94,6 +105,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Toast.makeText(LoginActivity.this, "FOI", Toast.LENGTH_SHORT).show();
+
+                //HomeActivity_.intent(LoginActivity.this).start();
+
             }
         },1000);
     }

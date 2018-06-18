@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     @ViewById(R.id.container)
     protected ViewPager mContainer;
 
-    private FeedFragment mFeedFragment;
+    protected FeedFragment mFeedFragment;
 
     /**
      * Depois da criação da activity (onCreate), o metodo com anotação

@@ -5,25 +5,25 @@ import com.google.gson.annotations.SerializedName;
 public class Cervejas {
 
     @SerializedName("nome_familia_cerveja")
-    private String mNomeFamiliaCerveja = "";
+    protected String mNomeFamiliaCerveja = "";
 
     @SerializedName("descricao_cerveja")
-    private String mDescricaoCerveja = "";
+    protected String mDescricaoCerveja = "";
 
     @SerializedName("descricao_fabricante")
-    private String mDescricaoFabricante = "";
+    protected String mDescricaoFabricante = "";
 
     @SerializedName("teor_alcoolico")
-    private String mTeorAlcoolico = "";
+    protected String mTeorAlcoolico = "";
 
     @SerializedName("ibu_cerveja")
-    private String mIbuCerveja = "";
+    protected String mIbuCerveja = "";
 
     @SerializedName("url_fotos")
-    private String urlFoto = "";
+    protected String urlFoto = "";
 
     @SerializedName("sobre_cerveja")
-    private String mSobreCerveja = "";
+    protected String mSobreCerveja = "";
 
     public String getNomeFamiliaCerveja() {
         return mNomeFamiliaCerveja;
