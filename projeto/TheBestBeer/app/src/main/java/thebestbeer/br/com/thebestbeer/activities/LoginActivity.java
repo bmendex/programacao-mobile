@@ -96,13 +96,5 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "FOI", Toast.LENGTH_SHORT).show();
             }
         },1000);
-
-//        mBinding.entrarSemlgnFb.setVisibility(View.VISIBLE);
-//        mBinding.entrarSemlgnFb.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                HomeActivity_.intent(LoginActivity.this).start();
-//            }
-//        });
     }
 }

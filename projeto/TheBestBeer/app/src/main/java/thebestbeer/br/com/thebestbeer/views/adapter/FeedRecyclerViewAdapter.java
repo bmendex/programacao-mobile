@@ -58,7 +58,8 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
         }
 
         public void bind(Cervejas cervejas) {
-
+            mBinding.setCervejas(cervejas);
+            mBinding.executePendingBindings();
         }
     }
 }

@@ -1,6 +1,7 @@
 package thebestbeer.br.com.thebestbeer.fragmentos;
 
 import android.support.v4.app.Fragment;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
@@ -19,7 +20,7 @@ public class FeedFragment extends Fragment{
      * os dados vindos do build()
      */
     @FragmentArg
-    private String mTitulo;
+    String mTitulo;
 
     @ViewById(R.id.feed_recyclerview)
 
