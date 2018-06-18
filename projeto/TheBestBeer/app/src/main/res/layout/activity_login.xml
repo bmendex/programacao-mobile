@@ -31,6 +31,15 @@
             android:layout_alignParentBottom="true"
             android:layout_margin="10dp" />
 
+        <Button
+            android:id="@+id/entrar_sem_lgn_fb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:text="Entrar" />
+
     </RelativeLayout>
 
 </layout>
