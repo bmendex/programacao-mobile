@@ -13,19 +13,19 @@ public class RestResponse<T> {
     @SerializedName("result")
     protected T mResult;
 
-    public List<String> getmMassages() {
+    public List<String> getMassages() {
         return mMassages;
     }
 
-    public void setmMassages(List<String> mMassages) {
-        this.mMassages = mMassages;
+    public void setMassages(List<String> massages) {
+        mMassages = massages;
     }
 
-    public T getmResult() {
+    public T getResult() {
         return mResult;
     }
 
-    public void setmResult(T mResult) {
-        this.mResult = mResult;
+    public void setResult(T result) {
+        mResult = result;
     }
 }

@@ -2,6 +2,7 @@ package thebestbeer.br.com.thebestbeer.fragmentos;
 
 import android.app.ProgressDialog;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -44,7 +45,8 @@ public class FeedFragment extends Fragment{
         Log.d("FeedFragment.initi: " + mTitulo);
         Toast.makeText(getContext(), "Foi", Toast.LENGTH_SHORT).show();
 
-        ProgressDialog.Builder
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecyclerView.setHasFixedSize(true);
 
         NetworkManager.service().getCervejas().enqueue(new Callback<WebserviceResponse<Cervejas[]>>() {
             @Override
@@ -53,7 +55,7 @@ public class FeedFragment extends Fragment{
                 Log.d("FeedFragment.onResponse" + response.message());
 
                 trataRespostaOk(response.body());
-            }
+          }
 
             @Override
             public void onFailure(Call<WebserviceResponse<Cervejas[]>> call, Throwable t) {
@@ -72,7 +74,7 @@ public class FeedFragment extends Fragment{
     private void trataRespostaOk(WebserviceResponse<Cervejas[]> body) {
 
         // Recupera a lista de cervejas retornadas pelo webservice
-        final Cervejas[] result = body.getmResponse().getmResult();
+        final Cervejas[] result = body.getObject();
 
         List<Cervejas> cervejas = new ArrayList<>();
         for(Cervejas cerveja : result){

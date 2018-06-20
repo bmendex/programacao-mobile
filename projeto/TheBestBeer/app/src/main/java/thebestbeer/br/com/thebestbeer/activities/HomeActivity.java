@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     @ViewById(R.id.container)
     protected ViewPager mContainer;
 
-    protected FeedFragment mFeedFragment;
+    private FeedFragment mFeedFragment;
 
     /**
      * Depois da criação da activity (onCreate), o metodo com anotação
@@ -49,6 +49,9 @@ public class HomeActivity extends AppCompatActivity {
         //Instanciando lista do fragmento
         List<Fragment> lista = new ArrayList<>();
         lista.add(mFeedFragment);
+        lista.add(FeedFragment_.builder().mTitulo("Teste1").build());
+        lista.add(FeedFragment_.builder().mTitulo("Teste2").build());
+        lista.add(FeedFragment_.builder().mTitulo("Teste3").build());
 
         //define a classe adapter do viewpager
         HomeViewPagerAdapter adapter = new HomeViewPagerAdapter(

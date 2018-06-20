@@ -22,8 +22,8 @@ public class Cervejas {
     @SerializedName("url_fotos")
     protected String urlFoto = "";
 
-    @SerializedName("sobre_cerveja")
-    protected String mSobreCerveja = "";
+    @SerializedName("estilo_cerveja")
+    protected String mEstiloCerveja = "";
 
     public String getNomeFamiliaCerveja() {
         return mNomeFamiliaCerveja;
@@ -73,14 +73,11 @@ public class Cervejas {
         this.urlFoto = urlFoto;
     }
 
-    public String getSobreCerveja() {
-        return mSobreCerveja;
+    public String getEstiloCerveja() {
+        return mEstiloCerveja;
     }
 
-    public void setSobreCerveja(String mSobreCerveja) {
-        this.mSobreCerveja = mSobreCerveja;
-    }
-
-    public void setDescricaoCerveja() {
+    public void setEstiloCerveja(String estiloCerveja) {
+        mEstiloCerveja = estiloCerveja;
     }
 }

@@ -9,6 +9,7 @@ import java.util.List;
 
 import thebestbeer.br.com.thebestbeer.databinding.ItemFeedBinding;
 import thebestbeer.br.com.thebestbeer.models.Cervejas;
+import thebestbeer.br.com.thebestbeer.util.Log;
 
 public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerViewAdapter.ViewHolder>{
 
@@ -35,6 +36,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         // onBindViewHolder: Chamado qndo o item do recycler view for ser exibido
         final Cervejas cervejas = mListaCerveja.get(position);
+
         holder.bind(cervejas);
     }
 

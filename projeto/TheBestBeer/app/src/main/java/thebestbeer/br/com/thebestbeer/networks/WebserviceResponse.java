@@ -2,16 +2,51 @@ package thebestbeer.br.com.thebestbeer.networks;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Date;
+
 public class WebserviceResponse<T> {
 
-    @SerializedName("RestResponse")
-    protected RestResponse<T> mResponse;
+    @SerializedName("date")
+    protected Date mData;
 
-    public RestResponse<T> getmResponse() {
-        return mResponse;
+    @SerializedName("status")
+    protected int mStatus;
+
+    @SerializedName("message")
+    protected String mMessage;
+
+    @SerializedName("object")
+    protected T mObject;
+
+    public Date getData() {
+        return mData;
     }
 
-    public void setmResponse(final RestResponse<T> response) {
-        this.mResponse = response;
+    public void setData(Date data) {
+        mData = data;
+    }
+
+    public int getStatus() {
+        return mStatus;
+    }
+
+    public void setStatus(int status) {
+        mStatus = status;
+    }
+
+    public String getMessage() {
+        return mMessage;
+    }
+
+    public void setMessage(String message) {
+        mMessage = message;
+    }
+
+    public T getObject() {
+        return mObject;
+    }
+
+    public void setObject(T object) {
+        mObject = object;
     }
 }
