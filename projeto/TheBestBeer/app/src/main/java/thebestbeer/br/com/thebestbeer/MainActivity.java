@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
         LoginActivity_.intent(this).start();
         finish();
 
-//        if (estaLogado) {
-//            HomeActivity_.intent(this).start();
-//            finish();
-//        }
-//        else {
-//            LoginActivity_.intent(this).start();
-//            finish();
-//        }
+        if (estaLogado) {
+            HomeActivity_.intent(this).start();
+            finish();
+        }
+        else {
+            LoginActivity_.intent(this).start();
+            finish();
+        }
     }
 }

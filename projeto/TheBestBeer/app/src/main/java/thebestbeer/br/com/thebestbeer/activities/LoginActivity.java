@@ -89,50 +89,12 @@ public class LoginActivity extends AppCompatActivity {
                 });
 
 
-
-
-//        mBinding.loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-//                    @Override
-//                    public void onSuccess(final LoginResult loginResult) {
-//                        // Se sucesso acessar home
-//                        Toast.makeText(LoginActivity.this, "Deu boa", Toast.LENGTH_SHORT).show();
-//
-//                        Log.d("LoginActivity.onSuccess: "+ loginResult.getAccessToken());
-//
-//                        AccessToken accessToken = AccessToken.getCurrentAccessToken();
-//                        boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
-//                    }
-//
-//                    @Override
-//                    public void onCancel() {
-//                        // Se cancelar voltar para tela de login
-//                        Toast.makeText(LoginActivity.this, "Não deu boa", Toast.LENGTH_SHORT).show();
-//
-//                        Log.d("LoginActivity.onCancel");
-//                    }
-//
-//                    @Override
-//                    public void onError(FacebookException exception) {
-//                        // Se erro setar mensagem
-//                        Toast.makeText(LoginActivity.this, "ERRO", Toast.LENGTH_SHORT).show();
-//                        Log.d("LoginActivity.onError");
-//                    }
-//                }
-//        );
-//        mBinding.entrarSemLgnFb.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                HomeActivity_.intent(LoginActivity.this).start();
-//                Log.d("LoginActivity.onClick" + HomeActivity_.intent(LoginActivity.this));
-//            }
-//        });
-
         // Exibe a tela de login por 3 segundos e apresenta a tela inicial
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                    Toast.makeText(LoginActivity.this, "FOI", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Bem-vindo", Toast.LENGTH_SHORT).show();
 
                 //HomeActivity_.intent(LoginActivity.this).start();
 

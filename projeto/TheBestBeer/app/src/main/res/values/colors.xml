@@ -11,4 +11,5 @@
     <color name="colorButtonSave">#8bc34a</color>
     <color name="colorButtonCancel">#c12219</color>
     <color name="colorTextWhite">#ffff</color>
+    <color name="colorTextBlack">#2b2b2b</color>
 </resources>

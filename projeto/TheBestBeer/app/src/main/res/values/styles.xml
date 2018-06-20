@@ -20,4 +20,12 @@
         <item name="android:textSize">@dimen/font_large</item>
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="TextoLable">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/font_normal</item>
+    </style>
+    <style name="TextoResult">
+        <item name="android:textColor">@color/colorTextBlack</item>
+        <item name="android:textSize">@dimen/font_large</item>
+    </style>
 </resources>

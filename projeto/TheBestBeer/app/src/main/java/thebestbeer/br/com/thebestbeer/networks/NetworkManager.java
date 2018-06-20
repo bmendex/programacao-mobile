@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkManager {
 
-    private static final String URL = "http://947ba3e8.ngrok.io/";
+    private static final String URL = "http://c60f000b.ngrok.io/";
 
     private static NetworkManager sInstance = new NetworkManager();
 

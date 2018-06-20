@@ -7,7 +7,7 @@ import thebestbeer.br.com.thebestbeer.models.Usuario;
 
 public interface RestService {
 
-    @GET("/thebestbeer/crud/cervejas.php")
+    @GET("/thebestbeer/jsonCerveja.php")
     Call<WebserviceResponse<Cervejas[]>> getCervejas();
 
 }

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import thebestbeer.br.com.thebestbeer.databinding.ItemFeedBinding;
+import thebestbeer.br.com.thebestbeer.databinding.ItemCervejaBinding;
 import thebestbeer.br.com.thebestbeer.models.Cervejas;
 import thebestbeer.br.com.thebestbeer.util.Log;
 
@@ -27,7 +27,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
     public ViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, final int viewType) {
         // onCreateViewHolder: Cria o layout que sera inflado dentro de cada item do recycler view
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        ItemFeedBinding binding = ItemFeedBinding.inflate(layoutInflater, parent, false);
+        ItemCervejaBinding binding = ItemCervejaBinding.inflate(layoutInflater, parent, false);
         return new ViewHolder(binding);
     }
 
@@ -52,9 +52,9 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
      */
     class ViewHolder extends RecyclerView.ViewHolder{
 
-        private final ItemFeedBinding mBinding;
+        private final ItemCervejaBinding mBinding;
 
-        ViewHolder(ItemFeedBinding binding){
+        ViewHolder(ItemCervejaBinding binding){
             super(binding.getRoot());
             mBinding = binding;
         }
