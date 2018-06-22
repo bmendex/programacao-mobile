@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cervejas"
+            type="thebestbeer.br.com.thebestbeer.models.Cervejas" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bcg_cerveja">
+
+        <ImageView
+            android:id="@+id/foto_cerveja"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/red_ale" />
+
+        <TextView
+            android:id="@+id/lb_descricao_cerveja"
+            style="@style/TextoLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/lb_familia"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="55dp"
+            android:text="Nome:" />
+
+        <TextView
+            android:id="@+id/descricao_cervejas_feed"
+            style="@style/TextoTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/foto_cerveja"
+            android:layout_marginEnd="114dp"
+            android:text="@{cervejas.descricaoCerveja}"
+            android:textSize="@dimen/icon_large" />
+
+        <TextView
+            android:id="@+id/lb_familia"
+            style="@style/TextoLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descricao_cervejas_feed"
+            android:layout_toEndOf="@+id/foto_cerveja"
+            android:text="Família:" />
+
+        <TextView
+            android:id="@+id/descricao_familia"
+            style="@style/TextoResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descricao_cervejas_feed"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{cervejas.nomeFamiliaCerveja}"
+            android:textSize="@dimen/icon_normal" />
+
+        <TextView
+            android:id="@+id/lb_estilo_cerveja"
+            style="@style/TextoLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/lb_descricao_cerveja"
+            android:layout_below="@+id/descricao_familia"
+            android:text="Estilo: " />
+
+        <TextView
+            android:id="@+id/estilo_cerveja"
+            style="@style/TextoResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/descricao_familia"
+            android:layout_below="@+id/descricao_familia"
+            android:text="@{cervejas.estiloCerveja}"
+            android:textSize="@dimen/icon_normal"
+            tools:layout_toEndOf="@+id/lb_estilo_cerveja" />
+
+        <TextView
+            android:id="@+id/lb_teor_cerveja"
+            style="@style/TextoLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/lb_descricao_cerveja"
+            android:layout_alignTop="@+id/teor_cerveja"
+            android:text="Teor: " />
+
+        <TextView
+            android:id="@+id/teor_cerveja"
+            style="@style/TextoResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/estilo_cerveja"
+            android:layout_below="@+id/estilo_cerveja"
+            android:text="@{cervejas.teorAlcoolico}"
+            android:textSize="@dimen/icon_normal"
+            tools:layout_toEndOf="@+id/lb_teor_cerveja" />
+
+
+        <TextView
+            android:id="@+id/lb_ibu_cerveja"
+            style="@style/TextoLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/lb_descricao_cerveja"
+            android:layout_below="@+id/teor_cerveja"
+            android:text="Ibu: " />
+
+        <TextView
+            android:id="@+id/ibu_cerveja"
+            style="@style/TextoResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/teor_cerveja"
+            android:layout_below="@+id/teor_cerveja"
+            android:layout_toEndOf="@+id/lb_ibu_cerveja"
+            android:text="@{cervejas.ibuCerveja}"
+            android:textSize="@dimen/icon_normal" />
+
+    </RelativeLayout>
+</layout>
