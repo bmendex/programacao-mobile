@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Cervejas {
 
-    @SerializedName("nome_familia_cerveja")
+    @SerializedName("descricao_familia")
     protected String mNomeFamiliaCerveja = "";
 
     @SerializedName("descricao_cerveja")
@@ -13,13 +13,13 @@ public class Cervejas {
     @SerializedName("descricao_fabricante")
     protected String mDescricaoFabricante = "";
 
-    @SerializedName("teor_alcoolico")
+    @SerializedName("teor_cerveja")
     protected String mTeorAlcoolico = "";
 
     @SerializedName("ibu_cerveja")
     protected String mIbuCerveja = "";
 
-    @SerializedName("url_fotos")
+    @SerializedName("img_cerveja")
     protected String urlFoto = "";
 
     @SerializedName("estilo_cerveja")

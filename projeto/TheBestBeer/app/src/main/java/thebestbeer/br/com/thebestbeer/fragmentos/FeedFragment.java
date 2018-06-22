@@ -68,7 +68,7 @@ public class FeedFragment extends Fragment{
         // Para tratar o erro e exibir a mensagem de erro da chamada do webservice
 
         Log.e("FeedFragment.trataRespostaErro" + t);
-        Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
     }
 
     private void trataRespostaOk(WebserviceResponse<Cervejas[]> body) {
