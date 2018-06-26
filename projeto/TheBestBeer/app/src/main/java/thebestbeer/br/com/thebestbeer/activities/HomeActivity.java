@@ -15,8 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import thebestbeer.br.com.thebestbeer.R;
+import thebestbeer.br.com.thebestbeer.fragmentos.AvaliacaoFragment;
+import thebestbeer.br.com.thebestbeer.fragmentos.AvaliacaoFragment_;
+import thebestbeer.br.com.thebestbeer.fragmentos.CardapioFragment;
+import thebestbeer.br.com.thebestbeer.fragmentos.CardapioFragment_;
 import thebestbeer.br.com.thebestbeer.fragmentos.FeedFragment;
 import thebestbeer.br.com.thebestbeer.fragmentos.FeedFragment_;
+import thebestbeer.br.com.thebestbeer.models.Avaliacao;
 import thebestbeer.br.com.thebestbeer.util.Log;
 import thebestbeer.br.com.thebestbeer.views.adapter.HomeViewPagerAdapter;
 
@@ -30,6 +35,8 @@ public class HomeActivity extends AppCompatActivity {
     protected ViewPager mContainer;
 
     private FeedFragment mFeedFragment;
+    private CardapioFragment mCardapioFragment;
+    private AvaliacaoFragment mAvaliacaoFragment;
 
     /**
      * Depois da criação da activity (onCreate), o metodo com anotação
@@ -44,27 +51,19 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         // Instanciando o FeedFragment com annotation
-        mFeedFragment = FeedFragment_.builder().mTitulo("Cerveja").build();
+        mFeedFragment = FeedFragment_.builder().build();
+        mCardapioFragment = CardapioFragment_.builder().build();
+        mAvaliacaoFragment = AvaliacaoFragment_.builder().build();
 
         //Instanciando lista do fragmento
         List<Fragment> lista = new ArrayList<>();
         lista.add(mFeedFragment);
-//        lista.add(FeedFragment_.builder().mTitulo("Teste1").build());
-//        lista.add(FeedFragment_.builder().mTitulo("Teste2").build());
-//        lista.add(FeedFragment_.builder().mTitulo("Teste3").build());
+        lista.add(mCardapioFragment);
 
         //define a classe adapter do viewpager
         HomeViewPagerAdapter adapter = new HomeViewPagerAdapter(
                 getSupportFragmentManager(), lista);
         mContainer.setAdapter(adapter);
-
-//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-//        transaction.replace(R.id.container, mFeedFragment);
-//        transaction.commit();
-
-
-
     }
 
 }

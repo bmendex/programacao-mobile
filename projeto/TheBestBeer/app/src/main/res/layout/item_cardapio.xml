@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cardapios"
+            type="thebestbeer.br.com.thebestbeer.models.Cardapio" />
+    </data>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_between_lb"
+            android:paddingRight="@dimen/space_between_lb">
+
+            <TextView
+                android:id="@+id/titulo_cerveja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@{cardapios.descricaoCerveja}"
+                tools:text="Red Ale"
+                style="@style/TextoLable"
+                android:textSize="@dimen/font_larger"/>
+
+
+            <EditText
+                android:id="@+id/cerveja_descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@{cardapios.precoCerveja}"
+                tools:text="R$12,50" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

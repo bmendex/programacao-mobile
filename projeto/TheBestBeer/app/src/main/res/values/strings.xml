@@ -55,5 +55,6 @@
     <string name="cervejas_cadastradas">Cervejas</string>
     <string name="cardapio_cadastrado">Cardapio</string>
     <string name="eventos_cerveja">Eventos</string>
+    <string name="avaliacao_cliente">Avaliar</string>
 
 </resources>
