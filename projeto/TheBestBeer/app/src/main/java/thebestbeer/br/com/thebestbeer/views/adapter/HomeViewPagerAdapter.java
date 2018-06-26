@@ -1,5 +1,6 @@
 package thebestbeer.br.com.thebestbeer.views.adapter;
 
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -24,5 +25,21 @@ public class HomeViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount() {
         return mFragmentos.size();
+    }
+
+
+    // define o titulo de cada aba
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        if(position == 0){
+            return "Cerveja";
+        }else if(position == 1){
+            return "Cardápio";
+        }else if(position == 2){
+            return "Avaliações";
+        }
+        return "";
+
     }
 }

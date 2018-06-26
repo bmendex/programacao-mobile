@@ -1,5 +1,6 @@
 package thebestbeer.br.com.thebestbeer.activities;
 
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -31,6 +32,9 @@ public class HomeActivity extends AppCompatActivity {
     @ViewById(R.id.home_toolbar)
     protected Toolbar mToolbar;
 
+    @ViewById(R.id.tabs)
+    protected TabLayout mTabLayout;
+
     @ViewById(R.id.container)
     protected ViewPager mContainer;
 
@@ -54,6 +58,10 @@ public class HomeActivity extends AppCompatActivity {
         mFeedFragment = FeedFragment_.builder().build();
         mCardapioFragment = CardapioFragment_.builder().build();
         mAvaliacaoFragment = AvaliacaoFragment_.builder().build();
+
+        // Seta os tabs
+        mTabLayout.setupWithViewPager(mContainer);
+
 
         //Instanciando lista do fragmento
         List<Fragment> lista = new ArrayList<>();
