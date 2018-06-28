@@ -6,7 +6,7 @@ public class Avaliacao {
 
 
     @SerializedName("descricao_cerveja")
-    protected String mDescricaoCervejaAvaliacao;
+    protected String mDescricaoCerveja;
 
     @SerializedName("aroma_cerv")
     protected String mAromaCerveja;
@@ -29,6 +29,30 @@ public class Avaliacao {
     @SerializedName("img_cerveja")
     protected String mFotoCervAval;
 
+    @SerializedName("descricao_familia")
+    protected String mDescricaoFamilia;
+
+    @SerializedName("estilo_cerveja")
+    protected String mEstiloCerveja;
+
+    public String getDescricaoFamilia() {
+        return mDescricaoFamilia;
+    }
+
+    public Avaliacao setDescricaoFamilia(String mDescricaoFamilia) {
+        this.mDescricaoFamilia = mDescricaoFamilia;
+        return this;
+    }
+
+    public String getEstiloCerveja() {
+        return mEstiloCerveja;
+    }
+
+    public Avaliacao setEstiloCerveja(String mEstiloCerveja) {
+        this.mEstiloCerveja = mEstiloCerveja;
+        return this;
+    }
+
     public String getFotoCervAval() {
         return mFotoCervAval;
     }
@@ -38,12 +62,12 @@ public class Avaliacao {
         return this;
     }
 
-    public String getDescricaoCervejaAvaliacao() {
-        return mDescricaoCervejaAvaliacao;
+    public String getDescricaoCerveja() {
+        return mDescricaoCerveja;
     }
 
-    public Avaliacao setDescricaoCervejaAvaliacao(String mDescricaoCervejaAvaliacao) {
-        this.mDescricaoCervejaAvaliacao = mDescricaoCervejaAvaliacao;
+    public Avaliacao setDescricaoCerveja(String mDescricaoCerveja) {
+        this.mDescricaoCerveja = mDescricaoCerveja;
         return this;
     }
 

@@ -33,9 +33,9 @@ public class HomeViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if(position == 0){
-            return "Cerveja";
-        }else if(position == 1){
             return "Cardápio";
+        }else if(position == 1){
+            return "Cerveja";
         }else if(position == 2){
             return "Avaliações";
         }

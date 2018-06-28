@@ -30,6 +30,8 @@ public class AvaliacaoRecyclerViewAdapter extends RecyclerView.Adapter<Avaliacao
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Avaliacao avaliacoes = mListaAvaliacao.get(position);
+
+        holder.bind(avaliacoes);
     }
 
     @Override

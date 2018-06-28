@@ -65,6 +65,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
 
     // GSON
+    implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
     //HTTP
@@ -76,4 +77,10 @@ dependencies {
 
     // Import da biblioteca glide
     implementation 'com.github.bumptech.glide:glide:3.5.2'
+
+    // Number Stepper
+    implementation 'com.github.czy1121:numberstepper:1.2.0'
+
+    // Discret ScrowView
+    implementation 'com.yarolegovich:discrete-scrollview:1.4.7'
 }

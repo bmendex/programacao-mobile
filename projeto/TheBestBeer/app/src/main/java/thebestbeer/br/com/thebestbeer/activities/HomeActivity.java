@@ -65,8 +65,8 @@ public class HomeActivity extends AppCompatActivity {
 
         //Instanciando lista do fragmento
         List<Fragment> lista = new ArrayList<>();
-        lista.add(mFeedFragment);
         lista.add(mCardapioFragment);
+        lista.add(mFeedFragment);
         lista.add(mAvaliacaoFragment);
 
         //define a classe adapter do viewpager
