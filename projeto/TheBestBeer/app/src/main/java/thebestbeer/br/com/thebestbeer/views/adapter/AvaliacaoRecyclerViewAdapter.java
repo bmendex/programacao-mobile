@@ -46,8 +46,8 @@ public class AvaliacaoRecyclerViewAdapter extends RecyclerView.Adapter<Avaliacao
             mBinding = binding;
         }
 
-        public void bind(Avaliacao avalicoes) {
-            mBinding.setAvalicao(avalicoes);
+        public void bind(Avaliacao avaliacoes) {
+            mBinding.setAvaliacao(avaliacoes);
             mBinding.executePendingBindings();
         }
     }

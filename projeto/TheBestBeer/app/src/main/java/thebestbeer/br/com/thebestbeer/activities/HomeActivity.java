@@ -67,6 +67,7 @@ public class HomeActivity extends AppCompatActivity {
         List<Fragment> lista = new ArrayList<>();
         lista.add(mFeedFragment);
         lista.add(mCardapioFragment);
+        lista.add(mAvaliacaoFragment);
 
         //define a classe adapter do viewpager
         HomeViewPagerAdapter adapter = new HomeViewPagerAdapter(

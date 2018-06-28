@@ -12,7 +12,7 @@ public interface RestService {
     @GET("/thebestbeer/jsonCerveja.php")
     Call<WebserviceResponse<Cervejas[]>> getCervejas();
 
-    @GET("/thebestbeer/jsonAvalicao.php")
+    @GET("/thebestbeer/jsonAvaliacao.php")
     Call<WebserviceResponse<Avaliacao[]>> getAvalicao();
 
     @GET("/thebestbeer/jsonCardapio.php")

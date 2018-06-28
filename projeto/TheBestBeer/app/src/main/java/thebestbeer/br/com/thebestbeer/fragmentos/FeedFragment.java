@@ -43,7 +43,6 @@ public class FeedFragment extends Fragment{
     protected void initi(){
 
         Log.d("FeedFragment.initi: " + mTitulo);
-        Toast.makeText(getContext(), "Foi", Toast.LENGTH_SHORT).show();
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setHasFixedSize(true);

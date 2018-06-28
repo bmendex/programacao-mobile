@@ -1,8 +1,14 @@
 package thebestbeer.br.com.thebestbeer.fragmentos;
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
@@ -16,6 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import thebestbeer.br.com.thebestbeer.R;
+import thebestbeer.br.com.thebestbeer.databinding.ItemAvalicaoBinding;
 import thebestbeer.br.com.thebestbeer.models.Avaliacao;
 import thebestbeer.br.com.thebestbeer.models.Cardapio;
 import thebestbeer.br.com.thebestbeer.networks.NetworkManager;
@@ -27,13 +34,9 @@ import thebestbeer.br.com.thebestbeer.views.adapter.CardapioRecyclerViewAdapter;
 @EFragment(R.layout.fragment_avaliacao)
 public class AvaliacaoFragment extends Fragment{
 
-    /**
-     * @FragmentArg é usado para indicar que a variavel será inicializada com
-     * os dados vindos do build()
-     */
-
     @ViewById(R.id.avaliacao_recyclerview)
     RecyclerView mRecyclerView;
+
 
     @AfterViews
     protected void initi(){
@@ -86,6 +89,4 @@ public class AvaliacaoFragment extends Fragment{
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.getAdapter().notifyDataSetChanged();
     }
-
-
 }

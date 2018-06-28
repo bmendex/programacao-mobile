@@ -9,7 +9,7 @@ public class Avaliacao {
     protected String mDescricaoCervejaAvaliacao;
 
     @SerializedName("aroma_cerv")
-    protected String mAomaCerveja;
+    protected String mAromaCerveja;
 
     @SerializedName("sabor_cerv")
     protected String mSaborCerveja;
@@ -26,6 +26,18 @@ public class Avaliacao {
     @SerializedName("satisfacao_cerv")
     protected String mSatisfacaoCerveja;
 
+    @SerializedName("img_cerveja")
+    protected String mFotoCervAval;
+
+    public String getFotoCervAval() {
+        return mFotoCervAval;
+    }
+
+    public Avaliacao setFotoCervAval(String mFotoCervAval) {
+        this.mFotoCervAval = mFotoCervAval;
+        return this;
+    }
+
     public String getDescricaoCervejaAvaliacao() {
         return mDescricaoCervejaAvaliacao;
     }
@@ -35,12 +47,12 @@ public class Avaliacao {
         return this;
     }
 
-    public String getAomaCerveja() {
-        return mAomaCerveja;
+    public String getAromaCerveja() {
+        return mAromaCerveja;
     }
 
-    public Avaliacao setAomaCerveja(String mAomaCerveja) {
-        this.mAomaCerveja = mAomaCerveja;
+    public Avaliacao setAromaCerveja(String mAromaCerveja) {
+        this.mAromaCerveja = mAromaCerveja;
         return this;
     }
 

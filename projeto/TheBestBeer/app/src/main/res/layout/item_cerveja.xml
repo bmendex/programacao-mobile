@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#FF8C00">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -41,14 +42,13 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/descricao_cervejas"
+                    style="@style/TextoLable"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:focusable="false"
                     android:hint="Nome"
                     android:inputType="none"
                     android:text="@{cervejas.descricaoCerveja}"
-                    android:textColor="@color/colorButton"
-                    android:textColorHint="@color/colorButtonSave"
                     tools:text="Red Ale" />
             </android.support.design.widget.TextInputLayout>
 
@@ -62,14 +62,13 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/descricao_familia"
+                    style="@style/TextoLable"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:focusable="false"
                     android:hint="Familia"
                     android:inputType="none"
                     android:text="@{cervejas.nomeFamiliaCerveja}"
-                    android:textColor="@color/colorButton"
-                    android:textColorHint="@color/colorAccent"
                     tools:text="Fa" />
             </android.support.design.widget.TextInputLayout>
 
@@ -83,14 +82,13 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/estilo_cerveja"
+                    style="@style/TextoLable"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:focusable="false"
                     android:hint="Estilo"
                     android:inputType="none"
                     android:text="@{cervejas.estiloCerveja}"
-                    android:textColor="@color/colorButton"
-                    android:textColorHint="@color/colorAccent"
                     tools:text="Estilo" />
             </android.support.design.widget.TextInputLayout>
 
@@ -102,14 +100,13 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/teor_cerveja"
+                    style="@style/TextoLable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:focusable="false"
                     android:hint="Teor"
                     android:inputType="none"
                     android:text="@{cervejas.teorAlcoolico}"
-                    android:textColor="@color/colorButton"
-                    android:textColorHint="@color/colorAccent"
                     tools:text="Teor" />
             </android.support.design.widget.TextInputLayout>
 
@@ -122,14 +119,13 @@
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/ibu_cerveja"
+                    style="@style/TextoLable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:focusable="false"
                     android:hint="Ibu"
                     android:inputType="none"
                     android:text="@{cervejas.ibuCerveja}"
-                    android:textColor="@color/colorButton"
-                    android:textColorHint="@color/colorAccent"
                     tools:text="Ibu" />
             </android.support.design.widget.TextInputLayout>
         </RelativeLayout>

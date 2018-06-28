@@ -15,13 +15,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#FF8C00">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/space_between_lb"
-            android:paddingRight="@dimen/space_between_lb">
+            android:padding="16dp">
 
             <ImageView
                 android:id="@+id/foto_cardapio"
@@ -49,7 +49,7 @@
                 android:focusable="false"
                 android:inputType="none"
                 android:text="@{cardapios.precoCervejaStr}"
-                android:textColor="@color/colorButton"
+                android:textColor="#008000"
                 tools:text="R$12,50" />
 
         </RelativeLayout>

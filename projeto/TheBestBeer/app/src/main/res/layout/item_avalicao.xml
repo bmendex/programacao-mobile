@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
-            name="avalicao"
-            type="thebestbeer.br.com.thebestbeer.models.Avaliacao"/>
+            name="avaliacao"
+            type="thebestbeer.br.com.thebestbeer.models.Avaliacao" />
     </data>
 
-    <RelativeLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bcg_cerveja">
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/foto_cerveja_avaliada"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:imageUrl="@{avaliacao.fotoCervAval}"
+                android:src="@drawable/red_ale"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lb_descr_cerveja"
+                android:layout_toEndOf="@+id/foto_cerveja_avaliada">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Nome"
+                    android:text="@{avaliacao.descricaoCervejaAvaliacao}"/>
+            </android.support.design.widget.TextInputLayout>
 
 
-    </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
 </layout>
