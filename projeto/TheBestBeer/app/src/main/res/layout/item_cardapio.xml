@@ -28,17 +28,28 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/red_ale"
-                app:imageUrl="@{cardapios.fotoCardapio}"/>
+                app:imageUrl="@{cardapios.fotoCardapio}" />
 
             <TextView
                 android:id="@+id/titulo_cerveja"
                 style="@style/TextoLable"
-                android:layout_toEndOf="@+id/foto_cardapio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/foto_cardapio"
+                android:textStyle="italic"
                 android:text="@{cardapios.descricaoCerveja}"
                 android:textSize="@dimen/font_larger"
                 tools:text="Red Ale" />
+
+            <TextView
+                android:id="@+id/lb_estilo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titulo_cerveja"
+                android:layout_toEndOf="@+id/foto_cardapio"
+                style="@style/TextoResult"
+                android:textStyle="italic"
+                tools:text="@{cardapios.descricaoFamilia}"/>
 
 
             <EditText
@@ -51,6 +62,14 @@
                 android:text="@{cardapios.precoCervejaStr}"
                 android:textColor="#008000"
                 tools:text="R$12,50" />
+
+            <Button
+                android:id="@+id/botao_info"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_info"
+                android:layout_alignEnd="@+id/cerveja_descricao"
+                android:layout_below="@+id/foto_cardapio"
+                android:text="Saber mais" />
 
         </RelativeLayout>
 

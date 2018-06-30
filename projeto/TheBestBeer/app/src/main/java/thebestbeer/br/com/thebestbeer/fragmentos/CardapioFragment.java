@@ -1,8 +1,11 @@
 package thebestbeer.br.com.thebestbeer.fragmentos;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
@@ -36,6 +39,9 @@ public class CardapioFragment extends Fragment{
     @ViewById(R.id.cardapio_recyclerview)
     RecyclerView mRecyclerView;
 
+    @ViewById(R.id.botao_info)
+    Button mButtonInfo;
+
     @AfterViews
     protected void initi(){
 
@@ -58,6 +64,9 @@ public class CardapioFragment extends Fragment{
                 trataRespostaErro(t);
             }
         });
+
+
+
     }
 
     private void trataRespostaErro(Throwable t) {

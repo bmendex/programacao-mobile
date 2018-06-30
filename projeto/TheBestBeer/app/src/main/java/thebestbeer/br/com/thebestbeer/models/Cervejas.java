@@ -2,6 +2,9 @@ package thebestbeer.br.com.thebestbeer.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Cervejas {
 
     @SerializedName("descricao_familia")
@@ -24,6 +27,68 @@ public class Cervejas {
 
     @SerializedName("estilo_cerveja")
     protected String mEstiloCerveja = "";
+
+    @SerializedName("ingredientes")
+    protected String mIngrdientes;
+
+    @SerializedName("sazonal")
+    protected String mSazonal;
+
+    @SerializedName("corpo_ideal")
+    protected String mCorpoIdeal;
+
+    @SerializedName("cor_srm")
+    protected float mCorSrm;
+
+    @SerializedName("temperatura")
+    protected String mTemperatura;
+
+
+    public String getIngrdientes() {
+        return mIngrdientes;
+    }
+
+    public Cervejas setIngrdientes(String mIngrdientes) {
+        this.mIngrdientes = mIngrdientes;
+        return this;
+    }
+
+    public String getSazonal() {
+        return mSazonal;
+    }
+
+    public Cervejas setSazonal(String mSazonal) {
+        this.mSazonal = mSazonal;
+        return this;
+    }
+
+    public String getCorpoIdeal() {
+        return mCorpoIdeal;
+    }
+
+    public Cervejas setCorpoIdeal(String mCorpoIdeal) {
+        this.mCorpoIdeal = mCorpoIdeal;
+        return this;
+    }
+
+    public String getCorSrm() {
+        return String.valueOf(mCorSrm);
+    }
+
+
+    public Cervejas setCorSrm(float mCorSrm) {
+        this.mCorSrm = mCorSrm;
+        return this;
+    }
+
+    public String getTemperatura() {
+        return mTemperatura + "ºC";
+    }
+
+    public Cervejas setTemperatura(String mTemperatura) {
+        this.mTemperatura = mTemperatura;
+        return this;
+    }
 
     public String getNomeFamiliaCerveja() {
         return mNomeFamiliaCerveja;
@@ -50,7 +115,7 @@ public class Cervejas {
     }
 
     public String getTeorAlcoolico() {
-        return mTeorAlcoolico;
+        return mTeorAlcoolico + "% ABV";
     }
 
     public void setTeorAlcoolico(String mTeorAlcoolico) {

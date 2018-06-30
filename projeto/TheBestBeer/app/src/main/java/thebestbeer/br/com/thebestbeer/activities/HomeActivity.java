@@ -6,6 +6,8 @@ import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.widget.Button;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -27,7 +29,7 @@ import thebestbeer.br.com.thebestbeer.util.Log;
 import thebestbeer.br.com.thebestbeer.views.adapter.HomeViewPagerAdapter;
 
 @EActivity(R.layout.activity_home)
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
 
     @ViewById(R.id.home_toolbar)
     protected Toolbar mToolbar;
@@ -37,6 +39,9 @@ public class HomeActivity extends AppCompatActivity {
 
     @ViewById(R.id.container)
     protected ViewPager mContainer;
+
+    @ViewById(R.id.botao_info)
+    protected Button mBotaoInfo;
 
     private FeedFragment mFeedFragment;
     private CardapioFragment mCardapioFragment;
@@ -75,4 +80,11 @@ public class HomeActivity extends AppCompatActivity {
         mContainer.setAdapter(adapter);
     }
 
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        if(id == mBotaoInfo.getId()){
+            getSupportFragmentManager().beginTransaction().replace(R.id.feed_recyclerview,mFeedFragment);
+        }
+    }
 }

@@ -17,6 +17,18 @@ public class Cardapio {
     @SerializedName("img_cardapio")
     protected String mFotoCardapio;
 
+    @SerializedName("descricao_familia")
+    protected String mDescricaoFamilia;
+
+    public String getDescricaoFamilia() {
+        return mDescricaoFamilia;
+    }
+
+    public Cardapio setDescricaoFamilia(String mDescricaoFamilia) {
+        this.mDescricaoFamilia = mDescricaoFamilia;
+        return this;
+    }
+
     public String getFotoCardapio() {
         return mFotoCardapio;
     }

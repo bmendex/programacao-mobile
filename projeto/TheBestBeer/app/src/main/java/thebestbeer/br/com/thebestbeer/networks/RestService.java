@@ -8,7 +8,6 @@ import thebestbeer.br.com.thebestbeer.models.Cervejas;
 import thebestbeer.br.com.thebestbeer.models.Usuario;
 
 public interface RestService {
-
     @GET("/thebestbeer/jsonCerveja.php")
     Call<WebserviceResponse<Cervejas[]>> getCervejas();
 
@@ -17,5 +16,4 @@ public interface RestService {
 
     @GET("/thebestbeer/jsonCardapio.php")
     Call<WebserviceResponse<Cardapio[]>> getCardapio();
-
 }

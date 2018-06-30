@@ -86,6 +86,7 @@
                 android:layout_height="match_parent"
                 android:padding="16dp">
 
+
                 <TextView
                     android:id="@+id/lb_aroma"
                     android:layout_width="wrap_content"
@@ -106,10 +107,12 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lb_aroma"
                     android:layout_centerHorizontal="true"
+                    android:background="#cacaca"
                     app:nsMaxValue="10"
                     app:nsMinValue="0"
                     app:nsStep="1"
                     app:nsValue="0" />
+
 
                 <TextView
                     android:id="@+id/lb_sabor"
@@ -122,9 +125,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_stepper_aroma"
                     android:layout_toEndOf="@+id/lb_sabor"
-                    android:text="@{avaliacao.saborCerveja}"
-                    android:layout_below="@+id/lb_stepper_aroma"/>
+                    android:text="@{avaliacao.saborCerveja}" />
 
                 <ezy.ui.view.NumberStepper
                     android:id="@+id/lb_stepper_sabor"
@@ -133,6 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lb_sabor"
                     android:layout_centerHorizontal="true"
+                    android:background="#cacaca"
                     app:nsMaxValue="10"
                     app:nsMinValue="0"
                     app:nsStep="1"
@@ -149,9 +153,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_stepper_sabor"
                     android:layout_toEndOf="@+id/lb_sensacao"
-                    android:text="@{avaliacao.sensacaoCerveja}"
-                    android:layout_below="@+id/lb_stepper_sabor"/>
+                    android:text="@{avaliacao.sensacaoCerveja}" />
 
                 <ezy.ui.view.NumberStepper
                     android:id="@+id/lb_stepper_sensacao"
@@ -160,6 +164,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lb_sensacao"
                     android:layout_centerHorizontal="true"
+                    android:background="#cacaca"
                     app:nsMaxValue="10"
                     app:nsMinValue="0"
                     app:nsStep="1"
@@ -176,9 +181,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_stepper_sensacao"
                     android:layout_toEndOf="@+id/lb_aparencia"
-                    android:text="@{avaliacao.aparenciaCerveja}"
-                    android:layout_below="@+id/lb_stepper_sensacao"/>
+                    android:text="@{avaliacao.aparenciaCerveja}" />
 
                 <ezy.ui.view.NumberStepper
                     android:id="@+id/lb_stepper_aparencia"
@@ -187,6 +192,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/lb_aparencia"
                     android:layout_centerHorizontal="true"
+                    android:background="#cacaca"
                     app:nsMaxValue="10"
                     app:nsMinValue="0"
                     app:nsStep="1"

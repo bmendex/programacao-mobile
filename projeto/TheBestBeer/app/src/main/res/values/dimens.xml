@@ -3,4 +3,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="font_local_defaul">40dp</dimen>
     <dimen name="space_between_lb">10dp</dimen>
+    <dimen name="button_info">39dp</dimen>
 </resources>
