@@ -1,5 +1,6 @@
 package thebestbeer.br.com.thebestbeer.activities;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -29,7 +30,7 @@ import thebestbeer.br.com.thebestbeer.util.Log;
 import thebestbeer.br.com.thebestbeer.views.adapter.HomeViewPagerAdapter;
 
 @EActivity(R.layout.activity_home)
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
+public class HomeActivity extends AppCompatActivity{
 
     @ViewById(R.id.home_toolbar)
     protected Toolbar mToolbar;
@@ -42,6 +43,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     @ViewById(R.id.botao_info)
     protected Button mBotaoInfo;
+
+    @ViewById(R.id.fab)
+    FloatingActionButton mButtonBack;
 
     private FeedFragment mFeedFragment;
     private CardapioFragment mCardapioFragment;
@@ -78,13 +82,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         HomeViewPagerAdapter adapter = new HomeViewPagerAdapter(
                 getSupportFragmentManager(), lista);
         mContainer.setAdapter(adapter);
+
+        mButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PreHomeActivity_.intent(getApplicationContext()).start();
+            }
+        });
+
     }
 
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        if(id == mBotaoInfo.getId()){
-            getSupportFragmentManager().beginTransaction().replace(R.id.feed_recyclerview,mFeedFragment);
-        }
-    }
 }

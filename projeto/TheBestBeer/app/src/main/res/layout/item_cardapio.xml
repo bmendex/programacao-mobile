@@ -69,7 +69,9 @@
                 android:layout_height="@dimen/button_info"
                 android:layout_alignEnd="@+id/cerveja_descricao"
                 android:layout_below="@+id/foto_cardapio"
-                android:text="Saber mais" />
+                android:text="Saber mais"
+                android:background="@drawable/round_corner_button"
+                android:textColor="#ffff"/>
 
         </RelativeLayout>
 

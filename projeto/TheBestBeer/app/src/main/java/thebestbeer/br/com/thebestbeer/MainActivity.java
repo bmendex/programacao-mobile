@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import thebestbeer.br.com.thebestbeer.activities.HomeActivity_;
 import thebestbeer.br.com.thebestbeer.activities.LoginActivity_;
+import thebestbeer.br.com.thebestbeer.activities.PreHomeActivity_;
 import thebestbeer.br.com.thebestbeer.util.Log;
 import thebestbeer.br.com.thebestbeer.util.SharedPrefUtil;
 
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d("MainActivity.onCreate");
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         boolean estaLogado = SharedPrefUtil.getEfetuouLogin(this);
         Log.d("MainActivity.onCreate" + estaLogado);
 
@@ -22,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
 
         if (estaLogado) {
-            HomeActivity_.intent(this).start();
+            PreHomeActivity_.intent(this).start();
             finish();
         }
         else {
