@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d("MainActivity.onCreate");
 
+        // Inclui icone no app
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 

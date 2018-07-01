@@ -3,33 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activities.PreHomeActivity">
-    <data>
-    </data>
+
+    <data></data>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bg">
 
             <TextView
+                android:id="@+id/lb_titulo"
+                style="@style/TextoLable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_enter_cerveja"
                 android:layout_centerHorizontal="true"
-                style="@style/TextoLable"
-                android:text="Olá, seja bem-vindo ao The Best Beer"
-                android:id="@+id/lb_titulo"/>
+                android:text="Olá, seja bem-vindo ao The Best Beer" />
 
             <Button
+                android:id="@+id/btn_enter_cerveja"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tudo sobre cerveja"
                 android:layout_centerInParent="true"
                 android:background="@drawable/round_corner_button"
-                android:textColor="#ffff"
-                android:id="@+id/btn_enter_cerveja"/>
+                android:text="Tudo sobre cerveja"
+                android:textColor="#ffff" />
 
 
         </RelativeLayout>

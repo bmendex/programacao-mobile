@@ -25,6 +25,11 @@ public class PreHomeActivity extends AppCompatActivity {
     protected void initi(){
         mBinding = ActivityPreHomeBinding.inflate(getLayoutInflater());
 
+        // Inclui icone no app
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         mButtonEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

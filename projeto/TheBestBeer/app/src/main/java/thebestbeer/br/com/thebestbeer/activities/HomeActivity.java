@@ -63,6 +63,11 @@ public class HomeActivity extends AppCompatActivity{
             setSupportActionBar(mToolbar);
         }
 
+        // Inclui icone no app
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         // Instanciando o FeedFragment com annotation
         mFeedFragment = FeedFragment_.builder().build();
         mCardapioFragment = CardapioFragment_.builder().build();
