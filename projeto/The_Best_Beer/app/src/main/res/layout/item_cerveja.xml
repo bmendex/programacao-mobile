@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cervejas"
+            type="thebestbeer.br.com.the_best_beer.models.Cervejas" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#ecd7ac">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_between_lb"
+            android:paddingRight="@dimen/space_between_lb">
+
+            <ImageView
+                android:id="@+id/foto_cerveja"
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:soundEffectsEnabled="false"
+                android:src="@drawable/red_ale"
+                app:imageUrl="@{cervejas.urlFoto}" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/descricao_cervejas"
+                    style="@style/TextoNomeCerv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:text="@{cervejas.descricaoCerveja}"
+                    tools:text="Red Ale" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lb_cervejaria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/layout_nome"
+                android:layout_toStartOf="@+id/foto_cerveja">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Cervejaria"
+                    android:inputType="none"
+                    android:text="@{cervejas.descricaoFabricante}" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/laylout_familia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lb_cervejaria"
+                android:layout_toStartOf="@+id/foto_cerveja">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/descricao_familia"
+                    style="@style/TextoLable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Familia"
+                    android:inputType="none"
+                    android:text="@{cervejas.nomeFamiliaCerveja}" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_estilo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/laylout_familia"
+                android:layout_toStartOf="@+id/foto_cerveja">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/estilo_cerveja"
+                    style="@style/TextoLable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Estilo"
+                    android:inputType="none"
+                    android:text="@{cervejas.estiloCerveja}" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_teor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/layout_estilo">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/teor_cerveja"
+                    style="@style/TextoLable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Teor"
+                    android:inputType="none"
+                    android:text="@{cervejas.teorAlcoolico}"
+                    tools:text="Teor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_ibu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_teor">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/ibu_cerveja"
+                    style="@style/TextoLable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Ibu"
+                    android:inputType="none"
+                    android:text="@{cervejas.ibuCerveja}"
+                    tools:text="Ibu" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_cor_srm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_estilo"
+                android:layout_toEndOf="@+id/layout_teor"
+                android:layout_toStartOf="@+id/foto_cerveja">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Cor SRM"
+                    android:inputType="none"
+                    android:text="@{cervejas.corSrm}" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_sazonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_cor_srm"
+                android:layout_toEndOf="@+id/layout_ibu"
+                android:layout_toStartOf="@+id/foto_cerveja">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Sazonal"
+                    android:inputType="none"
+                    android:text="@{cervejas.sazonal}"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_temperatura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_ibu"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/foto_cerveja">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Temp."
+                    android:inputType="none"
+                    android:text="@{cervejas.temperatura}"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_corpo_ideal"
+                android:layout_below="@+id/layout_temperatura"
+                android:layout_toStartOf="@+id/foto_cerveja"
+                android:layout_alignParentStart="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:hint="Corpo Ideal"
+                    android:text="@{cervejas.corpoIdeal}"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_ingrediente"
+                android:layout_below="@+id/layout_corpo_ideal">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:hint="Ingredientes"
+                    android:text="@{cervejas.ingrdientes}"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

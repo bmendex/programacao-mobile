@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="avaliacao"
+            type="thebestbeer.br.com.the_best_beer.models.Avaliacao" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="18dp">
+
+        <ImageView
+            android:id="@+id/foto_cerveja_avaliada"
+            android:layout_width="90dp"
+            android:layout_height="110dp"
+            android:src="@drawable/red_ale"
+            app:imageUrl="@{avaliacao.fotoCervAval}" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lb_descr_cerveja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/foto_cerveja_avaliada">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Nome"
+                android:inputType="none"
+                android:text="@{avaliacao.descricaoCerveja}" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lb_descr_familia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lb_descr_cerveja"
+            android:layout_toEndOf="@+id/foto_cerveja_avaliada">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Familia"
+                android:inputType="none"
+                android:text="@{avaliacao.descricaoFamilia}" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lb_descr_estilo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lb_descr_cerveja"
+            android:layout_toEndOf="@+id/lb_descr_familia">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Estilo"
+                android:inputType="none"
+                android:text="@{avaliacao.estiloCerveja}" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lb_descr_estilo"
+            android:layout_margin="8dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="#ecd7ac">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:id="@+id/lb_aroma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Aroma: " />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/lb_aroma"
+                    android:text="@{avaliacao.aromaCerveja}" />
+
+                <ezy.ui.view.NumberStepper
+                    android:id="@+id/lb_stepper_aroma"
+                    style="@style/NumberStepper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_aroma"
+                    android:layout_centerHorizontal="true"
+                    android:background="#cacaca"
+                    app:nsMaxValue="10"
+                    app:nsMinValue="0"
+                    app:nsStep="1"
+                    app:nsValue="0" />
+
+
+                <TextView
+                    android:id="@+id/lb_sabor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_stepper_aroma"
+                    android:layout_centerHorizontal="true"
+                    android:text="Sabor: " />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_stepper_aroma"
+                    android:layout_toEndOf="@+id/lb_sabor"
+                    android:text="@{avaliacao.saborCerveja}" />
+
+                <ezy.ui.view.NumberStepper
+                    android:id="@+id/lb_stepper_sabor"
+                    style="@style/NumberStepper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_sabor"
+                    android:layout_centerHorizontal="true"
+                    android:background="#cacaca"
+                    app:nsMaxValue="10"
+                    app:nsMinValue="0"
+                    app:nsStep="1"
+                    app:nsValue="0" />
+
+                <TextView
+                    android:id="@+id/lb_sensacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_stepper_sabor"
+                    android:layout_centerHorizontal="true"
+                    android:text="Sensação: " />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_stepper_sabor"
+                    android:layout_toEndOf="@+id/lb_sensacao"
+                    android:text="@{avaliacao.sensacaoCerveja}" />
+
+                <ezy.ui.view.NumberStepper
+                    android:id="@+id/lb_stepper_sensacao"
+                    style="@style/NumberStepper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_sensacao"
+                    android:layout_centerHorizontal="true"
+                    android:background="#cacaca"
+                    app:nsMaxValue="10"
+                    app:nsMinValue="0"
+                    app:nsStep="1"
+                    app:nsValue="0" />
+
+                <TextView
+                    android:id="@+id/lb_aparencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_stepper_sensacao"
+                    android:layout_centerHorizontal="true"
+                    android:text="Aparência: " />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_stepper_sensacao"
+                    android:layout_toEndOf="@+id/lb_aparencia"
+                    android:text="@{avaliacao.aparenciaCerveja}" />
+
+                <ezy.ui.view.NumberStepper
+                    android:id="@+id/lb_stepper_aparencia"
+                    style="@style/NumberStepper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_aparencia"
+                    android:layout_centerHorizontal="true"
+                    android:background="#cacaca"
+                    app:nsMaxValue="10"
+                    app:nsMinValue="0"
+                    app:nsStep="1"
+                    app:nsValue="0" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/lb_comentario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lb_stepper_aparencia">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="Comentário"
+                        android:inputType="textMultiLine"
+                        android:text="@{avaliacao.descricaoComentario}" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.HistoriaActivity">
+
+    <data></data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg">
+
+
+            <TextView
+                android:id="@+id/lb_historia_cerveja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="História da Cerveja"
+                android:textColor="#000000"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_historia_cerveja"
+                android:layout_marginTop="30dp"
+                android:padding="16dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lb_historia_cerveja"
+                        android:background="@drawable/bg"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ASSIM COMEÇA A HISTÓRIA
+\n\nHá evidências de que a prática da cervejaria originou-se na região da Mesopotâmia onde a cevada cresce em estado selvagem. Os primeiros registros de fabricação de cerveja têm aproximadamente 6 mil anos e remetem aos Sumérios, povo mesopotâmico.
+
+\n\nA primeira cerveja produzida foi, provavelmente, um acidente. Documentos históricos mostram que em 2100 a.C. os sumérios alegravam-se com uma bebida fermentada, obtida de cereais.
+
+\n\nNa Suméria, cerca de 40% da produção dos cereais destinavam-se às cervejarias chamadas “casas de cerveja”, mantida por mulheres. Os egípcios logo aprenderam a arte de fabricar cerveja e carregaram a tradição no milênio seguinte, agregando o líquido à sua dieta diária.
+\n\n A PRIMEIRA LEI DA CERVEJA
+\n\n A mais antiga lei que regulamenta a produção e a venda de cerveja é a Estela de Hamurabi, que data de 1760 a.C. Nela, se condena à morte quem não respeita os critérios de produção de cerveja indicados.
+
+\n\n Incluía várias leis de comercialização, fabricação e consumo da cerveja, relacionando direitos e deveres dos clientes das tabernas. O Código de Hamurabi também estabelecia uma ração diária de cerveja para o povo da Babilônia: 2 litros para os trabalhadores, 3 para os funcionários públicos e 5 para os administradores e o sumo sacerdote.
+
+\n\n O código também impunha punições severas para os taberneiros que tentassem enganar os seus clientes.
+
+\n\n A CERVEJA GANHA IMPORTÂNCIA
+\n\n A extrema relevância da cerveja para os egípcios refletia-se não só na existência de um alto funcionário encarregado de controlar e manter a qualidade da cerveja produzida, como também na criação de hieróglifos extra que descrevessem produtos e atividades relacionadas com a cerveja.
+
+\n\n Curiosamente, existem alguns povos que vivem ao longo do Nilo que ainda hoje fabricam cerveja num estilo muito próximo ao da era faraónica. Além de bem alimentar, servia também como remédio para certas doenças. Um documento médico, datado de 1600 a.C. e descoberto nas escavações de um túmulo, descreve cerca de 700 prescrições médicas, das quais 100 contêm a palavra cerveja.
+
+\n\n A DEUSA DA CERVEJA
+\n\n Diferentemente do que vemos hoje, os responsáveis pela produção da cerveja não eram os homens, pois eles naqueles tempos não tinham tempo para ficar em casa cozinhando, cuidando da prole ou fazendo cerveja… Haviam guerras a serem lutadas, animais a serem caçados e tarefas a serem cumpridas. O que deixava a cargo das mulheres fazer o pão assim como a cerveja. Por isso, a Deusa da cerveja, Ninkasi, é uma figura feminina. Deusa suméria da cerveja e Mestre Cervejeira entre os Deuses, Ninkasi. Nascida das bolhas de uma fonte de água fresca, seu nome significa “senhora que enche a boca”.
+
+\n\n LÚPULO É ADICIONADO À RECEITA
+\n\n Na Idade Média, vários mosteiros fabricavam cerveja, empregando diversas ervas para aromatizá-la, como mírica, rosmarinho, louro, sálvia, gengibre e o lúpulo, este utilizado até hoje e introduzido no processo de fabricação da cerveja entre os anos 700 e 800. O uso de lúpulo para dar o gosto amargo da cerveja e para preservá-la é atribuída aos monges do Mosteiro de San Gallo, na Suíça. Os monges por serem os únicos que reproduziam os manuscritos da época, puderam conservar e aperfeiçoar a técnica de fabricação da cerveja.
+
+\n\n CONSTITUI UM DOS MAIS ANTIGOS DECRETOS ALIMENTARES DA EUROPA.
+\n\n A Reinheitsgebot (português: Lei da Pureza da Cerveja) foi uma lei promulgada pelo duque Guilherme IV da Baviera, em 23 de Abril de 1516.
+
+\n\n A lei da pureza da cerveja instituiu que a cerveja deveria ser fabricada apenas com os seguintes ingredientes: água, malte de cevada e lúpulo. A levedura de cerveja não era conhecida à época. Devido à regulamentação europeia, outros ingredientes são autorizados nas cervejas alemãs, mas a maioria dos cervejeiros alemães continuam a seguir as prescrições do Reinheitsgebot, consideradas garantia de qualidade.
+
+\n\n Isto acontece principalmente nas marcas vendidas em território alemão. A Saint Bier segue rigorosamente a Lei de Pureza Alemã na fabricação de seus produtos.
+
+\n\n E CONHECEMOS A PASTEURIZAÇÃO
+\n\n Louis Pasteur, um francês nascido em Dolle, no dia 27 de Dezembro de 1822. É lembrado por suas notáveis descobertas das causas e prevenções de doenças. Entre seus feitos mais notáveis pode-se citar a redução da mortalidade e a criação da primeira vacina contra a raiva. Seus experimentos deram fundamento para a teoria microbiológica da doença.
+
+\n\n Atendeu a solicitação de alguns dos vinicultores e cervejeiros da região que lhe pediram para descobrir como os vinhos e a cervejas azedavam. Durante sua investigação, através do uso de microscópio, ele pôde constatar que a levedura ocasionava este processo.
+
+\n\n Solucionou este problema através de um processo que originou a atual técnica de pasteurização dos alimentos.
+
+\n\n NASCE UM DOS MAIS IMPORTANTES TIPOS DE CERVEJA
+\n\n Pilsener é um tipo de cerveja de baixa fermentação fabricada com maltes especiais e produzido na cidade de Pilsen (Plznen), situada na região da Boêmia, na atual República Checa. É chamada pilsener, pils ou pílsen conforme a língua do país onde é produzida. Fabricada inicialmente em 1842, é o estilo original que definiu as cervejas límpidas e de cor clara.1 Foi criada pelo cervejeiro da Baviera Joseph Groll na cidade de Pilsen, capital da região da Boêmia, na República Tcheca. Usa malte da Morávia e decocção para criar um perfil de malte bastante rico. É uma cerveja de baixa fermentação (lager).
+
+\n\n OS PRIMEIROS PASSOS
+\n\n A história das primeiras cervejarias no Brasil começa com a chegada de Maurício de Nassau ao Recife em 1637. Junto com Nassau veio o cervejeiro Dirck Dicx com uma planta de cervejaria e os componentes para serem montados.
+
+\n\n A cervejaria foi montada a partir de outubro de 1640 na residência chamada “La Fontaine” que Nassau deixou de utilizar após a construção do parque de Vrijburg. A ampliação da venda de cerveja ao Brasil ocorreu a partir de 1808, trazida pela família real portuguesa de mudança para o território. Consta que o rei consumia muito a bebida.
+
+\n\n Logo ao chegar, o rei Dom João decreta a abertura dos portos às nações amigas, abolindo o monopólio comercial luso. Até 1814 a abertura dos portos beneficiava exclusivamente a Inglaterra, que praticamente monopolizava o comércio com o Brasil, fazendo com que a cerveja consumida no Brasil, de qualquer origem, fosse introduzida com exclusividade pela Inglaterra.
+
+\n\n NASCEM OS PRIMEIROS RÓTULOS
+\n\n Até o 2º Reinado, em (1840), os anúncios comerciais nos jornais referiam-se, exclusivamente, à venda de cerveja, nunca à produção. A primeiras fábricas produziam cerveja sem marca alguma e geralmente vendiam, em barris, para os depósitos (comércio que nem sempre era só de cerveja), onde era vendida de várias formas, às vezes engarrafadas e com rótulos próprios.
+
+\n\n A venda era feita no balcão e na própria cervejaria (ver propaganda de empresa que atendia a particulares). Convites eram espalhados pelos proprietários em bares próximos e festas eram realizadas dentro das cervejarias. As entregas eram feitas por carroças ao comércio dos bairros próximos. Nesse momento, o Rio de Janeiro já tinha uma população de padrão médio formada por militares, oficiais de indústrias, proprietários de pequenas manufaturas, profissionais liberais e funcionários públicos.
+
+\n\n A cidade já era comparável a outras da Europa Central, e já possuía um mercado consumidor relevante.
+
+\n\n ANÚNCIO É PUBLICADO
+\n\n O consumo foi crescendo gradualmente e, em 1836, surgiu a primeira notícia sobre a fabricação de cerveja no Brasil. Esse anúncio, publicado no Jornal do Commercio do Rio de Janeiro, dizia o seguinte:
+
+\n\n “Na Rua Matacavalos, número 90, e Rua Direita número 86, da Cervejaria Brazileira, vende-se cerveja, bebida acolhida favoravelmente e muito procurada. Essa saudável bebida reúne a barateza a um sabor agradável e à propriedade de conservar-se por muito tempo”.
+
+\n\n UM PEDAÇO DA HISTÓRIA ENROLADO EM BARBANTE
+\n\n “Cerveja Marca Barbante” foi a denominação genérica dada às primeiras cervejas brasileiras que, com sua fabricação rudimentar, tinham um grau tão alto de fermentação que, mesmo depois de engarrafadas, produziam uma enorme quantidade de gás carbônico, criando grande pressão. A rolha era, então, amarrada com barbante para impedir que saltasse da garrafa. Refrescante e de baixo teor alcoólico, a cerveja foi aos poucos conquistando popularidade no Brasil. Era também, conhecida como “cerveja de cordão” na região Nordeste.
+
+\n\n DO INÍCIO ÀS GRANDES CORPORAÇÕES
+\n\n A partir de 1836 começaram a nascer no Brasil, marcas de grande sucesso empresarial que são conhecidas até hoje, como Antarctica e Brahma, Bohemia entre outras. Em 1999, A Companhia de Bebidas das Américas (AmBev) foi fundada. É uma empresa de capital aberto produtora de bens de consumo do Brasil.
+\n\n Segundo dados da consultoria Economatica, a Ambev é a maior empresa da América Latina com um valor de mercado de U$120,1 bilhões, à frente da Ecopetrol e Petrobras3 . Nasceu da fusão entre a Antarctica e a Brahma.
+
+\n\n ASCENSÃO DAS ARTESANAIS
+\n\n As microcervejarias trouxeram para os brasileiros a opção de consumir produtos cervejeiros exclusivos e diferenciados com vários tipos, texturas, aromas e sabores. Muitas delas produzem suas cervejas seguindo a Reinheitsgebot (Lei da Pureza Alemã).
+
+\n\n As microcervejarias já são um setor consolidado na Europa e nos EUA, no Brasil começaram a surgir na década de 90. Em 2012 as cervejas especiais representavam 8% do mercado nacional da bebida em 2012 e encerraram 2014 com uma participação de 11%, segundo o Sindicato Nacional da Indústria da Cerveja, que aponta a existência de 300 microcervejarias no País. A projeção é de que essa cota suba para 20% em 2020.
+"
+                            android:textAlignment="gravity"
+                            android:textColor="#000000" />
+
+
+                    </ScrollView>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>
