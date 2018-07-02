@@ -13,7 +13,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg">
+            android:background="@drawable/bg_login2">
 
 
             <TextView
@@ -28,27 +28,20 @@
                 android:textStyle="bold" />
 
 
-            <android.support.v7.widget.CardView
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/lb_historia_cerveja"
-                android:layout_marginTop="30dp"
-                android:padding="16dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                android:layout_below="@+id/lb_historia_cerveja">
 
-                    <ScrollView
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp">
+
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/lb_historia_cerveja"
-                        android:background="@drawable/bg"
-                        android:padding="24dp">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="ASSIM COMEÇA A HISTÓRIA
+                        android:text="ASSIM COMEÇA A HISTÓRIA
 \n\nHá evidências de que a prática da cervejaria originou-se na região da Mesopotâmia onde a cevada cresce em estado selvagem. Os primeiros registros de fabricação de cerveja têm aproximadamente 6 mil anos e remetem aos Sumérios, povo mesopotâmico.
 
 \n\nA primeira cerveja produzida foi, provavelmente, um acidente. Documentos históricos mostram que em 2100 a.C. os sumérios alegravam-se com uma bebida fermentada, obtida de cereais.
@@ -120,15 +113,13 @@
 
 \n\n As microcervejarias já são um setor consolidado na Europa e nos EUA, no Brasil começaram a surgir na década de 90. Em 2012 as cervejas especiais representavam 8% do mercado nacional da bebida em 2012 e encerraram 2014 com uma participação de 11%, segundo o Sindicato Nacional da Indústria da Cerveja, que aponta a existência de 300 microcervejarias no País. A projeção é de que essa cota suba para 20% em 2020.
 "
-                            android:textAlignment="gravity"
-                            android:textColor="#000000" />
+                        android:textAlignment="gravity"
+                        android:textColor="#000000" />
 
 
-                    </ScrollView>
+                </ScrollView>
 
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
+            </RelativeLayout>
 
         </RelativeLayout>
 

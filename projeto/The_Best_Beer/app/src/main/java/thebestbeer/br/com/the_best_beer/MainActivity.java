@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
         LoginActivity_.intent(this).start();
         finish();
 
-        if (estaLogado) {
-            PreHomeActivity_.intent(this).start();
-            finish();
-        }
-        else {
-            LoginActivity_.intent(this).start();
-            finish();
-        }
+//        if (estaLogado) {
+//            PreHomeActivity_.intent(this).start();
+//            finish();
+//        }
+//        else {
+//            LoginActivity_.intent(this).start();
+//            finish();
+//        }
     }
 }

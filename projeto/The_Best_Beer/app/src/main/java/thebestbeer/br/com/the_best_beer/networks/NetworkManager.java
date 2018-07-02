@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkManager {
 
-    private static final String URL = "http://192.168.1.3/";
+    private static final String URL = "http://192.164.4.43/";
 
     private static NetworkManager sInstance = new NetworkManager();
 
