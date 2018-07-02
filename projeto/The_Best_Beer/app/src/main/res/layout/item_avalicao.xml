@@ -72,150 +72,150 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.v7.widget.CardView
+
+        <RelativeLayout
             android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/lb_descr_estilo"
             android:layout_margin="8dp"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="#ecd7ac">
+            android:layout_marginTop="10dp">
 
-            <RelativeLayout
+
+            <TextView
+                android:id="@+id/lb_aroma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Aroma: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/lb_aroma"
+                android:text="@{avaliacao.aromaCerveja}" />
+
+            <ezy.ui.view.NumberStepper
+                android:id="@+id/lb_stepper_aroma"
+                style="@style/NumberStepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_aroma"
+                android:layout_centerHorizontal="true"
+                android:background="#cacaca"
+                app:nsMaxValue="10"
+                app:nsMinValue="0"
+                app:nsStep="1"
+                app:nsValue="0" />
+
+
+            <TextView
+                android:id="@+id/lb_sabor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_stepper_aroma"
+                android:layout_centerHorizontal="true"
+                android:text="Sabor: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_stepper_aroma"
+                android:layout_toEndOf="@+id/lb_sabor"
+                android:text="@{avaliacao.saborCerveja}" />
+
+            <ezy.ui.view.NumberStepper
+                android:id="@+id/lb_stepper_sabor"
+                style="@style/NumberStepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_sabor"
+                android:layout_centerHorizontal="true"
+                android:background="#cacaca"
+                app:nsMaxValue="10"
+                app:nsMinValue="0"
+                app:nsStep="1"
+                app:nsValue="0" />
+
+            <TextView
+                android:id="@+id/lb_sensacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_stepper_sabor"
+                android:layout_centerHorizontal="true"
+                android:text="Sensação: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_stepper_sabor"
+                android:layout_toEndOf="@+id/lb_sensacao"
+                android:text="@{avaliacao.sensacaoCerveja}" />
+
+            <ezy.ui.view.NumberStepper
+                android:id="@+id/lb_stepper_sensacao"
+                style="@style/NumberStepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_sensacao"
+                android:layout_centerHorizontal="true"
+                android:background="#cacaca"
+                app:nsMaxValue="10"
+                app:nsMinValue="0"
+                app:nsStep="1"
+                app:nsValue="0" />
+
+            <TextView
+                android:id="@+id/lb_aparencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_stepper_sensacao"
+                android:layout_centerHorizontal="true"
+                android:text="Aparência: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_stepper_sensacao"
+                android:layout_toEndOf="@+id/lb_aparencia"
+                android:text="@{avaliacao.aparenciaCerveja}" />
+
+            <ezy.ui.view.NumberStepper
+                android:id="@+id/lb_stepper_aparencia"
+                style="@style/NumberStepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_aparencia"
+                android:layout_centerHorizontal="true"
+                android:background="#cacaca"
+                app:nsMaxValue="10"
+                app:nsMinValue="0"
+                app:nsStep="1"
+                app:nsValue="0" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lb_comentario"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="16dp">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_stepper_aparencia">
 
-
-                <TextView
-                    android:id="@+id/lb_aroma"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="Aroma: " />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@+id/lb_aroma"
-                    android:text="@{avaliacao.aromaCerveja}" />
-
-                <ezy.ui.view.NumberStepper
-                    android:id="@+id/lb_stepper_aroma"
-                    style="@style/NumberStepper"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_aroma"
-                    android:layout_centerHorizontal="true"
-                    android:background="#cacaca"
-                    app:nsMaxValue="10"
-                    app:nsMinValue="0"
-                    app:nsStep="1"
-                    app:nsValue="0" />
-
-
-                <TextView
-                    android:id="@+id/lb_sabor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_stepper_aroma"
-                    android:layout_centerHorizontal="true"
-                    android:text="Sabor: " />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_stepper_aroma"
-                    android:layout_toEndOf="@+id/lb_sabor"
-                    android:text="@{avaliacao.saborCerveja}" />
-
-                <ezy.ui.view.NumberStepper
-                    android:id="@+id/lb_stepper_sabor"
-                    style="@style/NumberStepper"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_sabor"
-                    android:layout_centerHorizontal="true"
-                    android:background="#cacaca"
-                    app:nsMaxValue="10"
-                    app:nsMinValue="0"
-                    app:nsStep="1"
-                    app:nsValue="0" />
-
-                <TextView
-                    android:id="@+id/lb_sensacao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_stepper_sabor"
-                    android:layout_centerHorizontal="true"
-                    android:text="Sensação: " />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_stepper_sabor"
-                    android:layout_toEndOf="@+id/lb_sensacao"
-                    android:text="@{avaliacao.sensacaoCerveja}" />
-
-                <ezy.ui.view.NumberStepper
-                    android:id="@+id/lb_stepper_sensacao"
-                    style="@style/NumberStepper"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_sensacao"
-                    android:layout_centerHorizontal="true"
-                    android:background="#cacaca"
-                    app:nsMaxValue="10"
-                    app:nsMinValue="0"
-                    app:nsStep="1"
-                    app:nsValue="0" />
-
-                <TextView
-                    android:id="@+id/lb_aparencia"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_stepper_sensacao"
-                    android:layout_centerHorizontal="true"
-                    android:text="Aparência: " />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_stepper_sensacao"
-                    android:layout_toEndOf="@+id/lb_aparencia"
-                    android:text="@{avaliacao.aparenciaCerveja}" />
-
-                <ezy.ui.view.NumberStepper
-                    android:id="@+id/lb_stepper_aparencia"
-                    style="@style/NumberStepper"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_aparencia"
-                    android:layout_centerHorizontal="true"
-                    android:background="#cacaca"
-                    app:nsMaxValue="10"
-                    app:nsMinValue="0"
-                    app:nsStep="1"
-                    app:nsValue="0" />
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/lb_comentario"
+                <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/lb_stepper_aparencia">
+                    android:focusable="false"
+                    android:hint="Comentário"
+                    android:inputType="textMultiLine"
+                    android:text="@{avaliacao.descricaoComentario}" />
 
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:focusable="false"
-                        android:hint="Comentário"
-                        android:inputType="textMultiLine"
-                        android:text="@{avaliacao.descricaoComentario}" />
+            </android.support.design.widget.TextInputLayout>
 
-                </android.support.design.widget.TextInputLayout>
-
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/lb_comentario"
+                android:layout_marginTop="10dp"
+                android:background="#000000" />
+        </RelativeLayout>
     </RelativeLayout>
 
 </layout>

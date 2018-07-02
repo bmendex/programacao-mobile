@@ -11,70 +11,69 @@
     </data>
 
 
-    <android.support.v7.widget.CardView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="10dp"
-        app:cardBackgroundColor="#ecd7ac">
+        android:padding="16dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/foto_cardapio"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/red_ale"
+            app:imageUrl="@{cardapios.fotoCardapio}" />
+
+        <TextView
+            android:id="@+id/titulo_cerveja"
+            style="@style/TextoLable"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:layout_toEndOf="@+id/foto_cardapio"
+            android:text="@{cardapios.descricaoCerveja}"
+            android:textSize="@dimen/font_larger"
+            android:textStyle="italic"
+            tools:text="Red Ale" />
 
-            <ImageView
-                android:id="@+id/foto_cardapio"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/red_ale"
-                app:imageUrl="@{cardapios.fotoCardapio}" />
-
-            <TextView
-                android:id="@+id/titulo_cerveja"
-                style="@style/TextoLable"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/foto_cardapio"
-                android:textStyle="italic"
-                android:text="@{cardapios.descricaoCerveja}"
-                android:textSize="@dimen/font_larger"
-                tools:text="Red Ale" />
-
-            <TextView
-                android:id="@+id/lb_estilo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/titulo_cerveja"
-                android:layout_toEndOf="@+id/foto_cardapio"
-                style="@style/TextoResult"
-                android:textStyle="italic"
-                tools:text="@{cardapios.descricaoFamilia}"/>
+        <TextView
+            android:id="@+id/lb_estilo"
+            style="@style/TextoResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo_cerveja"
+            android:layout_toEndOf="@+id/foto_cardapio"
+            android:textStyle="italic"
+            tools:text="@{cardapios.descricaoFamilia}" />
 
 
-            <EditText
-                android:id="@+id/cerveja_descricao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:focusable="false"
-                android:inputType="none"
-                android:text="@{cardapios.precoCervejaStr}"
-                android:textColor="#008000"
-                tools:text="R$12,50" />
+        <EditText
+            android:id="@+id/cerveja_descricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:focusable="false"
+            android:inputType="none"
+            android:text="@{cardapios.precoCervejaStr}"
+            android:textColor="#008000"
+            tools:text="R$12,50" />
 
-            <Button
-                android:id="@+id/botao_info"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_info"
-                android:layout_alignEnd="@+id/cerveja_descricao"
-                android:layout_below="@+id/foto_cardapio"
-                android:text="Saber mais"
-                android:background="@drawable/round_corner_button"
-                android:textColor="#ffff"/>
+        <Button
+            android:id="@+id/botao_info"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_info"
+            android:layout_alignEnd="@+id/cerveja_descricao"
+            android:layout_below="@+id/foto_cardapio"
+            android:background="@drawable/round_corner_button"
+            android:text="Saber mais"
+            android:textColor="#ffff" />
 
-        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/botao_info"
+            android:layout_marginTop="10dp"
+            android:background="#000000"/>
 
-    </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
 
 </layout>
