@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onSuccess(LoginResult loginResult) {
                         // App code
                         SharedPrefUtil.setEfetuouLogin(LoginActivity.this, true);
-                        HomeActivity_.intent(LoginActivity.this).start();
+                        PreHomeActivity_.intent(LoginActivity.this).start();
                         finish();
                     }
 

@@ -23,16 +23,16 @@ public class MainActivity extends AppCompatActivity {
         boolean estaLogado = SharedPrefUtil.getEfetuouLogin(this);
         Log.d("MainActivity.onCreate" + estaLogado);
 
-        LoginActivity_.intent(this).start();
-        finish();
+//        LoginActivity_.intent(this).start();
+//        finish();
 
-//        if (estaLogado) {
-//            PreHomeActivity_.intent(this).start();
-//            finish();
-//        }
-//        else {
-//            LoginActivity_.intent(this).start();
-//            finish();
-//        }
+        if (estaLogado) {
+            PreHomeActivity_.intent(this).start();
+            finish();
+        }
+        else {
+            LoginActivity_.intent(this).start();
+            finish();
+        }
     }
 }
